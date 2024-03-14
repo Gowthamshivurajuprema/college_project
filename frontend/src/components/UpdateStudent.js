@@ -1,6 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 
+
+//git remote set-url origin http://github.com/cams/cams.git
+//https://github.com/Gowthamshivurajuprema/Cams
 const UpdateStudent = () => {
   const { studentRegNo } = useParams();
   const [updatedStudent, setUpdatedStudent] = useState({
