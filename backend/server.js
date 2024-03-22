@@ -18,12 +18,12 @@ const port = 4000;
 //
 //
 mongoose
-  .connect('mongodb+srv://spgowtham773:spGowthu1996@cluster0.n3ynrqe.mongodb.net/Cams?retryWrites=true&w=majority&appName=Cluster0', {
+  .connect('mongodb://localhost:27017/Cams', {
     useNewUrlParser: true,
     useUnifiedTopology: true
   })
   .then(() => {
-    console.log('Connected to mongoDb Atlas');
+    console.log('Connected to mongoDb compas');
   })
   .catch((error) => {
     console.log('Error connecting to Atlas:', error);

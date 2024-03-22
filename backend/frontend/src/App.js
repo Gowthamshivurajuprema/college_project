@@ -7,6 +7,7 @@ import RegistrationForm from "./components/RegistrationForm";
 import GetAllStudents from "./components/GetAllStudents";
 import UpdateStudent from "./components/UpdateStudent";
 import GetStudentByRegistrationNumber from "./components/GetStudentByRegistrationNumber ";// Import the GetStudentByRegistrationNumber component
+import AboutUs from "./AboutUs";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <NavBar />
         <Routes>
           <Route path="/" element={<HomePage />} />
+          <Route path="/about-us" element={<AboutUs />} />
           <Route path="/register" element={<RegistrationForm />} />
           <Route path="/get-all-students" element={<GetAllStudents />} />
           <Route

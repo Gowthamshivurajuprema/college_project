@@ -1,6 +1,5 @@
 import React from "react";
-
-function HomePage() {
+export function HomePage() {
   return (
     <div className="container">
       <div className="jumbotron">
@@ -9,7 +8,7 @@ function HomePage() {
       </div>
       <div className="row">
         <div className="col-md-6">
-          <img className="img-fluid" src="college-image.jpg" alt="College" />
+          <img className="img-fluid" src="/images/clg_pic.jpg" alt="College" />
         </div>
         <div className="col-md-6">
           <p>
@@ -36,5 +35,3 @@ function HomePage() {
     </div>
   );
 }
-
-export default HomePage;

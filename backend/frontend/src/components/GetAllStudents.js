@@ -4,7 +4,7 @@ function GetAllStudents() {
   const [students, setStudents] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:4000/getAllStudents") // Update the endpoint path
+    fetch("http://localhost:4000/getAllStudents")
       .then((response) => response.json())
       .then((data) => {
         setStudents(data);
@@ -13,13 +13,13 @@ function GetAllStudents() {
         console.error("Error fetching students:", error);
       });
   }, []);
+
   const handleDelete = (studentRegNo) => {
     fetch(`http://localhost:4000/students/${studentRegNo}`, {
       method: "DELETE"
     })
       .then((response) => {
         if (response.status === 200) {
-          // Update the students list after successful deletion
           setStudents((prevStudents) =>
             prevStudents.filter((student) => student.studentRegNo !== studentRegNo)
           );
@@ -31,10 +31,11 @@ function GetAllStudents() {
         console.error("Error deleting student:", error);
       });
   };
+
   const handleUpdate = (studentRegNo) => {
-    // Navigate to a separate update form page with the student registration number
     window.location.href = `/update-student/${studentRegNo}`;
   };
+
   return (
     <div className="container">
       <h2 className="text-center">All Students</h2>
@@ -50,7 +51,7 @@ function GetAllStudents() {
           </tr>
         </thead>
         <tbody>
-          {students.map((student) => (
+          {Array.isArray(students) && students.map((student) => (
             <tr key={student.studentRegNo}>
               <td>{student.studentRegNo}</td>
               <td>{student.studentName}</td>
@@ -79,4 +80,5 @@ function GetAllStudents() {
     </div>
   );
 }
+
 export default GetAllStudents;
