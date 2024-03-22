@@ -9,21 +9,21 @@ app.use(cors());
 const port = 4000;
 
 // Connect to MongoDB server
-// mongodb+srv://spgowtham773:spGowthu1996@cluster0.n3ynrqe.mongodb.net/Cams?retryWrites=true&w=majority&appName=Cluster0
+
 // url to check the collection and documents for in the mongo db atlas : https://cloud.mongodb.com/v2/65ee99127173530709c84478#/metrics/replicaSet/65ee9a0dd1a1e414f5a23c25/explorer/Cams/std/find
 //username : spgowtham773
 // password : spGowthu1996
 
-// Link : mongodb+srv://spgowtham773:spGowthu1996@cluster0.n3ynrqe.mongodb.net/ ?retryWrites=true&w=majority&appName=Cluster0
+
 //
-//
+//mongodb+srv://gowthamprema08:<gowthamprema08>@cams.phvhn6k.mongodb.net/?retryWrites=true&w=majority&appName=Cams
 mongoose
-  .connect('mongodb://localhost:27017/Cams', {
+  .connect('mongodb+srv://gowthamprema08:gowthamprema08@cams.phvhn6k.mongodb.net/?retryWrites=true&w=majority&appName=Cams', {
     useNewUrlParser: true,
     useUnifiedTopology: true
   })
   .then(() => {
-    console.log('Connected to mongoDb compas');
+    console.log('Connected to mongoDb atlas');
   })
   .catch((error) => {
     console.log('Error connecting to Atlas:', error);

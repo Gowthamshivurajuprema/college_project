@@ -7,6 +7,7 @@ function AboutUs() {
       <h2 className="display-4">About Us</h2>
       <div className="row">
         <div className="col-md-6">
+          
         <Carousel>
             <Carousel.Item>
               <img className="img-fluid" src="/images/clg_pic.jpg"alt="Slide 1" />
